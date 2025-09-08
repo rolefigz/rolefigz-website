@@ -162,7 +162,7 @@ body {
   border-radius: 8px;
 }
 
-/* TESTIMONIANZE */
+/* TESTIMONIANZE 
 .testimonials {
   padding: 2rem 1rem;
   text-align: center;
@@ -173,7 +173,7 @@ body {
   padding: 1rem;
   border-radius: 8px;
 }
-
+*/
 /* ABOUT */
 .about {
   padding: 2rem 1rem;
@@ -301,3 +301,4 @@ body {
     --duration: 25s;
   }
 }
+
