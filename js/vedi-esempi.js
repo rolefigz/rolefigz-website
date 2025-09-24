@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { img: "img/Prodotti/Calamite/ImanesPersonalizados.jpg", desc: "Calamite personalizzate per promozioni aziendali. (Possono essere dotate di NFC)." },
     { img: "img/Prodotti/Proiettore/ProiettoreMefyFoto7.jpg", desc: "Proiettori personalizzati per eventi, presentazioni o negozi." },
     { img: "img/Prodotti/BadgeMagnetico/BadgeMagneticoRolefigz.jpg", desc: "Badge magnetici personalizzati." },
-    { img: "img/Prodotti/PortaChiavi/PortaChiaviMefy.jpg", desc: "Portachiavi personalizzati per la tua azienda." },
+    { img: "img/Prodotti/PortaChiavi/PortaChiaviIstanbul.jpg", desc: "Portachiavi personalizzati per la tua azienda." },
     { img: "img/Prodotti/Mappe/MappaPiazzaDeiCavalli.jpg", desc: "Mappe 3D a misura." },
     { img: "img/PCB.jpg", desc: "Produzione di componenti e ricambi personalizzati realizzati su misura." },
     { img: "img/NonTroviQuelloCheCerchi.jpg", desc: "Non trovi quello che cerchi? Contattaci e troveremo la soluzione." }
@@ -96,4 +96,5 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
 
