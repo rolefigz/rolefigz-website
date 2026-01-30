@@ -1,0 +1,104 @@
+/* ===== Reset & base (mismo look general de tu sitio) ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: Arial, sans-serif;
+  background: #ebdece;
+  color: #111;
+  line-height: 1.4;
+}
+
+/* ===== Header / Logo ===== (igual a tu index.css) */
+.site-header { background: #000; padding: 1rem 0; text-align: center; }
+.logo { width: 120px; height: auto; }
+
+/* ===== Nav ===== (igual a tu index.css) */
+.nav-bar {
+  background: #f0f0f0;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+.nav-bar a {
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  margin: 0 0.5rem;
+}
+.nav-bar span { color: #000; margin: 0 0.5rem; }
+
+/* ===== Títulos página ===== */
+.page-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 1.8rem;
+}
+.page-subtitle {
+  text-align: center;
+  color: #444;
+  margin: 0.4rem 1rem 1.2rem;
+}
+
+/* ===== Grid de sucursales ===== */
+.branches-section {
+  padding: 1rem;
+}
+.branches-grid {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(260px, 1fr) );
+  gap: 1rem;
+  padding: 1rem;
+}
+.branch-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+}
+.branch-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+.branch-content {
+  padding: 1.2rem 1.2rem 1.6rem;
+  text-align: center;
+}
+.branch-title {
+  margin-bottom: 0.8rem;
+  font-size: 1.05rem;
+  color: #222;
+}
+
+/* ===== Botones (mismo estilo base) ===== */
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  text-align: center;
+  padding: 0.8rem 1.1rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.25s ease;
+}
+.btn-primary { background: #ff6600; }
+.btn-primary:hover { background: #e65c00; transform: translateY(-2px); }
+
+/* ===== Footer ===== (igual a tu index.css) */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  background: #000;
+  color: #fff;
+}
+.footer a { color: #ff6600; text-decoration: none; }
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .page-title { font-size: 1.5rem; }
+}
