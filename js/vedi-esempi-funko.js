@@ -104,4 +104,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const popup = document.getElementById("promo-popup");
+    const closeBtn = document.getElementById("popup-close");
+
+    // Mostrar popup después de 10 segundos
+    setTimeout(() => {
+      popup.classList.remove("popup-hidden");
+    }, 10000);
+
+    // Cerrar popup
+    closeBtn.addEventListener("click", () => {
+      popup.classList.add("popup-hidden");
+    });
+
+    // Cerrar clic fuera
+    popup.addEventListener("click", (e) => {
+      if (e.target === popup) {
+        popup.classList.add("popup-hidden");
+      }
+    });
+  });
+</script>
+
+
 
