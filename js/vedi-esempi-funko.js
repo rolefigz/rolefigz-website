@@ -1,4 +1,3 @@
-// js/vedi-esempi.js  (reemplaza todo el archivo con esto)
 document.addEventListener('DOMContentLoaded', () => {
 
   // === Productos (usa tu lista actual) ===
@@ -103,9 +102,3 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
-
-
-
-
-
-
