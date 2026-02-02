@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // === Productos (usa tu lista actual) ===
   const products = [
-    { img: "img/Sorteggio.png", desc: "Sorteggio per San Valentino GRATIS!." },
+    { img: "img/sorteggio.png", desc: "Sorteggio per San Valentino GRATIS!." },
     { img: "img/SanValentino/CanzoneNFC.png", desc: "Marchio con foto e canzone (NFC)." },
     { img: "img/SanValentino/CuoreLettere.png", desc: "Portachiavi con lettere personalizzate." },
     { img: "img/SanValentino/Funko.png", desc: "Funko personalizzato a partire di una foto." },
@@ -152,4 +152,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
 
