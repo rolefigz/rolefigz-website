@@ -35,20 +35,44 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  // === Renderizar productos (todos de una) ===
-  function displayAllProducts() {
-    productGrid.innerHTML = '';
-    products.forEach(product => {
-      const card = document.createElement('div');
-      card.className = 'product-card';
+// === Renderizar productos (todos de una) ===
+function displayAllProducts() {
+  productGrid.innerHTML = '';
+
+  products.forEach((product, index) => {
+    const card = document.createElement('div');
+    card.className = 'product-card';
+
+    // Primer producto → botón especial
+    if (index === 0) {
       card.innerHTML = `
         <img src="${product.img}" alt="${escapeHtml(product.desc)}">
         <p class="product-description">${escapeHtml(product.desc)}</p>
-        <button class="order-btn" data-img="${product.img}">Vedi di più</button>
+        <a 
+          class="order-btn"
+          href="https://www.instagram.com/p/DUOSb3kjCUE/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          PARTECIPA
+        </a>
       `;
-      productGrid.appendChild(card);
-    });
-  }
+    } 
+    // Resto de productos → comportamiento normal
+    else {
+      card.innerHTML = `
+        <img src="${product.img}" alt="${escapeHtml(product.desc)}">
+        <p class="product-description">${escapeHtml(product.desc)}</p>
+        <button class="order-btn" data-img="${product.img}">
+          Vedi di più
+        </button>
+      `;
+    }
+
+    productGrid.appendChild(card);
+  });
+}
+
 
   // Función simple para evitar inyección en el alt/text
   function escapeHtml(str) {
@@ -152,5 +176,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
 
 
