@@ -196,3 +196,72 @@ body {
 .close:hover {
   color: #ccc;
 }
+
+/* ===== Popup Promo Sorteggio ===== */
+.promo-popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 10001; /* encima del modal existente (9999) */
+}
+
+.promo-popup.is-open {
+  display: block;
+}
+
+.promo-popup__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+}
+
+.promo-popup__content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(92vw, 520px);
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  text-align: center;
+}
+
+.promo-popup__close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+  color: #111;
+}
+
+.promo-popup__img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 6px 0 12px;
+}
+
+.promo-popup__btn {
+  display: inline-block;
+  width: 100%;
+  background: #ff6600;
+  color: #fff;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.promo-popup__btn:hover {
+  background: #333;
+}
