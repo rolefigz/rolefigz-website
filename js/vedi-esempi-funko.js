@@ -54,7 +54,7 @@ function displayAllProducts() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          PARTECIPA
+          Partecipa
         </a>
       `;
     } 
@@ -176,6 +176,7 @@ function displayAllProducts() {
 
 
 });
+
 
 
 
