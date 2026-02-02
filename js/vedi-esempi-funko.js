@@ -101,4 +101,53 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
   });
 
+    // ===== Popup promo: solo en regali, aparece a los 5s =====
+  (function promoPopupInit() {
+    // Solo ejecutarlo en la página "regali"
+    const path = (window.location.pathname || "").toLowerCase();
+    const isRegaliPage =
+      path.includes("regali") || path.endsWith("/regali/") || path.endsWith("/regali.html");
+
+    if (!isRegaliPage) return;
+
+    const popup = document.getElementById("promoPopup");
+    if (!popup) return;
+
+    const openPopup = () => {
+      popup.classList.add("is-open");
+      popup.setAttribute("aria-hidden", "false");
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
+    };
+
+    const closePopup = () => {
+      popup.classList.remove("is-open");
+      popup.setAttribute("aria-hidden", "true");
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+    };
+
+    // Abrir a los 5 segundos
+    const t = setTimeout(openPopup, 5000);
+
+    // Cerrar al click en overlay o botón X
+    popup.addEventListener("click", (e) => {
+      const closeTarget = e.target.closest("[data-close='true']");
+      if (closeTarget) {
+        clearTimeout(t);
+        closePopup();
+      }
+    });
+
+    // Cerrar con ESC
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && popup.classList.contains("is-open")) {
+        clearTimeout(t);
+        closePopup();
+      }
+    });
+  })();
+
+
+
 });
